@@ -8,6 +8,54 @@
     <title>Responsive Images</title>
 </head>
 <body>
-    
+    <h1>Responive Images</h1>
+    <section>
+        <h2>Same image in different sizes</h2>
+        <img srcset="img/placeholder_320x320.png 320W,
+                     img/placeholder_640x400.png 640W,
+                     img/placeholder_1024x600.png 1024W"
+        sizes="(max-width: 320px) 320W,
+               (max-width: 640px) 640W,
+               (max-width: 1024px) 1024W"
+        src="img/placeholder_640x400.png" 
+        alt="Placeholder image">
+    </section>
+
+    <section>
+        <h2>Same image in different sizes (min-width)</h2>
+        <img srcset="img/placeholder_320x320.png 320w"
+        sizes="(min-width: 320px) 320w,
+                (min-width: 640px) 640w,
+                (min-width: 1024px) 1024w"
+        src="img/placeholder_640x400.png" 
+        alt="Placeholder">
+    </section>
+
+    <section>
+        <h2>Same size image with different resolutions</h2>
+        <img srcset="img/placeholder_320px320.png 1x,
+                     img/placeholder_640x640.png 2x,
+                     img/placeholder_960x960.png 3x"
+             src="img/placeholder_640x640.png"
+             alt="Placeholder Image"
+             class="avatar">
+    </section>
+
+    <section>
+        <h2>Different Images at different screens sizes and resolutions</h2>
+        <picture>
+            <source srcset="img/fall-dog-1200.jpg"
+                    media="(min-width: 1200px)">
+
+                    <source srcset="img/fall-dog-900.jpg"
+                    media="(min-width: 900px)">
+
+                    <source srcset="img/fall-dog-640.jpg"
+                    media="(min-width: 640px)">
+
+                    <img src="img/fall-dog-640.jpg" 
+                    alt="Placeholder Image">
+        </picture>
+    </section>
 </body>
 </html>
